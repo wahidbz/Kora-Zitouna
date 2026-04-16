@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Kora Zitouna - Legacy of Bounce. Offline 2D retro platformer in vanilla JavaScript." />
+  <title>Kora Zitouna 🫒 – Legacy of Bounce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-shell">
+    <canvas id="gameCanvas" width="1280" height="720" aria-label="Kora Zitouna game canvas"></canvas>
+
+    <div id="hud" class="panel" aria-live="polite">
+      <div class="group">
+        <span id="hud-level" class="badge highlight">Level 1</span>
+        <span id="hud-act" class="badge">Act 1</span>
+        <span id="hud-score" class="badge">Score 0</span>
+        <span id="hud-seeds" class="badge">Seeds 0</span>
+      </div>
+      <div class="group">
+        <span id="hud-status" class="badge">Reach the gate and keep the olive world alive</span>
+        <button id="btn-restart" class="hud-btn" aria-label="Restart level">↺</button>
+        <button id="btn-pause" class="hud-btn" aria-label="Pause game">⏸</button>
+        <button id="btn-sound" class="hud-btn" aria-label="Toggle sound">🔊</button>
+      </div>
+    </div>
+
+    <div id="banner" class="panel"></div>
+
+    <div id="overlay">
+      <div id="overlay-card"></div>
+    </div>
+
+    <div id="mobile-controls" aria-label="Mobile controls">
+      <div class="cluster">
+        <button class="control-btn" data-control="left" aria-label="Move left">◀</button>
+        <button class="control-btn" data-control="right" aria-label="Move right">▶</button>
+      </div>
+      <div class="cluster">
+        <button class="control-btn jump" data-control="jump" aria-label="Jump">⤴</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/data/levels.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
